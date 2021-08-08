@@ -36,7 +36,6 @@ function expressionCalculator(expr) {
 
     function calc(str) {
         const arr = str.split(' ').join('').split(/\b/);
-        
         let tot = 1;
         for (let i = 0; i<arr.length; i++){
             if (arr[i] == '.') {
@@ -55,7 +54,6 @@ function expressionCalculator(expr) {
                 arr[i]= arr[i].slice(0, 1);
             }
         }
-        console.log(arr);
         for (let i = 0; i<arr.length; i++){
             if (arr[i] == '*' || arr[i] == '/') {
                 if (arr[i] == '*') {
