@@ -29,7 +29,7 @@ function expressionCalculator(expr) {
        b = str.indexOf(')');
         str1 = str.slice(0,b);
         a = str1.lastIndexOf('(');
-       str =str.slice(0, a) + calc(str.substring(a+1,b-1)).toFixed(5) + str.slice(b+1);
+       str =str.slice(0, a) + calc(str.substring(a+1,b-1)).toFixed(15) + str.slice(b+1);
        b = str.indexOf(')');
     }
     return calc(str);
@@ -83,7 +83,7 @@ function expressionCalculator(expr) {
             return +a * +b;
         }
         function dot(a,b) {
-            return +a + (+b/100000);
+            return +a + (+b/1000000000000000);
         }
         function div(a, b) {
             if (b == '0') {
